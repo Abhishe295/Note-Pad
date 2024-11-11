@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    
+    background: linear-gradient(45deg,white,blue) ;
+}
+.wrapper{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+    /* column-gap: 50px; */
+    
+}
+.wrapper .add-box{
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(135deg,blue,black);
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 1rem black;
+}
+.add-box i{
+    height: 70px;
+    width: 70px;
+    border: 2px white dashed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.pop-up{
+    color: white;
+    position: sticky;
+    scale: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background-color: rgba(0, 0 , 0 ,0.1);
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.content{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(135deg,blue,black);
+    /* margin-top: 37px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 45px; */
+    border-radius: 30px;
+    box-shadow: 0 0 1rem black;
+    font-size: 20px;
+    color: white;
+}
+.content header{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    color: white;
+
+}
+header i{
+    margin-right: 8px;
+    color: whitesmoke;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: auto;
+    width: 90%;
+    color: white;
+}
+main input{
+    height: 35px;
+    border: none;
+    box-shadow: inset 0 0 0.5rem black;
+    border-radius: 7px;
+    padding: 4px;
+    padding-left: 10px;
+    font-size: large;
+}
+main textarea{
+    height: 190px;
+    border: none;
+    box-shadow: inset 0 0 0.5rem black;
+    border-radius: 7px;
+    padding: 4px;
+    resize: none;
+    font-size: 16px;
+    padding: 10px 0px 5px 10px;
+    /* overflow: auto; */
+}
+textarea::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar thumb */
+textarea::-webkit-scrollbar-thumb {
+    background-color: grey; /* Color of the scrollbar */
+    border-radius: 3px;
+    
+   
+}
+
+/* Hover effect on the scrollbar thumb */
+textarea::-webkit-scrollbar-thumb:hover {
+   
+    box-shadow: inset 0 0 0.5rem white; 
+    cursor: pointer;
+}
+
+
+.content footer{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    
+}
+footer p{
+    font-size: 15px;
+    color: grey;
+    
+}
+footer i{
+    color: white;
+}
+footer button{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: 0.5px solid black;
+    
+
+}
+footer button:hover{
+    box-shadow: inset 0 0 0.3rem black;
+    cursor: pointer;
+}
+.wrapper .real-contents{
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(135deg,blue,black);
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border-radius: 30px;
+    box-shadow: 0 0 1rem black;
+    position: relative;
+    color: white;
+}
+
+.real-contents header{
+    /* padding-top: 20px; */
+    width: 90%;
+    border-bottom: 1px solid grey;
+    /* padding-left: 25px; */
+    font-size: xx-large;
+    text-align: left;
+    color: white;
+} 
+.real-contents main{
+    font-size: 17px;
+   
+    height: 150px;
+    max-width: 93%;
+   
+    border-radius: 10px;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    
+}
+
+.real-contents main p{
+    padding: 5px 10px 5px 20px;.real-contents main p {
+        max-width: 93%; /* Set max width for the paragraph */
+        overflow-wrap: break-word; /* Breaks long words onto the next line */
+        white-space: normal; /* Allows the text to wrap normally */
+        margin: 0; /* Resetting margin for better control */
+    }
+}
+
+.real-contents footer{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 30px;
+    align-items: center;
+    border-top: 1px solid grey;
+
+}
+.real-contents footer i{
+    
+    width: 13%;
+    height: 90%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+
+}
+.real-contents footer i:hover{
+    background-color: grey;
+    cursor: pointer;
+    
+   
+    
+}
+
+.real-contents main::-webkit-scrollbar {
+    width: 0px;              
+    background: transparent; 
+    transition: width 0.3s ease; 
+}
+
+
+.real-contents main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer; 
+    border-radius: 4px;                    
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+}
+
+
+.real-contents main:hover::-webkit-scrollbar {
+    width: 4px; 
+    transition: width 0.3s ease; 
+}
+
+  
+  
+.real-contents main :hover {
+    box-shadow: inset 0 0 0.5rem black;
+    border-radius: 10px;
+    
+  }
+.box-up{
+    scale: 0;
+    position: absolute;
+    /* top: 160px;
+    right: 12px; */
+    top: 200px;
+    right: -22px;
+    height: 50px;
+    width: 100px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly;
+    align-items: left; */
+    transition: all 0.25s ease-in-out;
+    border-radius: 5px;
+  }
+.edit , .delete{
+   
+    height: 24px;
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    border-radius: 5px;
+    transition: all 0.25s ease-in-out;
+  }
+.edit:hover , .delete:hover{
+    background-color: grey;
+    cursor: pointer;
+  }
+.edit i , .delete i{
+    width: 91%;
+    color: black;
+    text-align: center;
+    text-transform: capitalize;
+}
+.show{
+    scale: 1;
+  }
+#title{
+    max-width: 230px;
+    overflow: auto;
+  }
+#title::-webkit-scrollbar {
+    width: 0px;              
+    background: transparent; 
+    transition: width 0.3s ease; 
+}
+
+
+#title::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer; 
+    border-radius: 4px;                    
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+}
+
+
+#title:hover::-webkit-scrollbar {
+    width: 4px; 
+    transition: width 0.3s ease; 
+}
+
+  
+  
+
+    
